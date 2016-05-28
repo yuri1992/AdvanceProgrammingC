@@ -5,6 +5,8 @@
 #ifndef ADVANCEDPROGRAMING_Q2_H
 #define ADVANCEDPROGRAMING_Q2_H
 
+#include "../q4/Q4A.h"
+
 typedef struct employee
 {
     int   name_length;
@@ -16,11 +18,11 @@ typedef int BOOL;
 #define FALSE 0
 #define TRUE 1
 
-Employee* parseEmployeesFromFile(char *emoloyeesFile, char* salaryBonusFile, int* size);
+STUDENT *readFile(char *fileName, int *size);
 void parseEmployeesBonus(char *fileName, Employee *employeeList, int size);
 void sortEmployeesBySalary(Employee *employList, int size);
 void saveEmployeesFile(char *fileName, Employee *employeeList, int size);
-void printEmployee(Employee emp);
+void printStudent(STUDENT stu);
 void swap(Employee* emp1, Employee* emp2);
 
 #endif //ADVANCEDPROGRAMING_Q2_H

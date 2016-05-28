@@ -7,9 +7,7 @@ int main(int argc, char **argv) {
 
     Employee *employeeList;
     int size = 0;
-    employeeList = parseEmployeesFromFile(argv[1],
-                                          argv[2],
-                                          &size);
+    employeeList = readFile(argv[1], &size);
     sortEmployeesBySalary(employeeList, size);
     saveEmployeesFile(argv[2], employeeList, size);
 

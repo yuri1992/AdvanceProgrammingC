@@ -9,13 +9,13 @@
 #include "q2.h"
 
 
-Employee* parseEmployeesFromFile(char *emoloyeesFile, char* salaryBonusFile, int* size) {
+STUDENT *readFile(char *fileName, int *size) {
     Employee ptr;
     FILE *fp1 = NULL;
     int stringLength;
     int realSize = 0, phySize=2;
 
-    fp1 = fopen(emoloyeesFile, "rb");
+    fp1 = fopen(fileName, "rb");
     assert(fp1 != NULL);
 
     Employee *employeeList = malloc(sizeof(Employee) * phySize);
